@@ -1,7 +1,7 @@
 import re
 import subprocess
 
-pattern = r"(feature|bugfix|maintenance|hotfix|patch)/\d+[_].*"
+pattern = r"(feature|bugfix|maintenance|hotfix|patch)/.*"
 branches = subprocess.check_output(["git", "branch"]).splitlines()
 
 for branch in branches:
