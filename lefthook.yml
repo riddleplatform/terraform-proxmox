@@ -1,0 +1,13 @@
+# EXAMPLE USAGE
+# Refer for explanation to following link:
+# https://github.com/evilmartians/lefthook/blob/master/docs/full_guide.md
+pre-commit:
+  scripts:
+    "branch-check.py":
+      runner: python
+    "terraform.py":
+      runner: python
+commit-msg:
+  scripts:
+    "commit-msg.py":
+      runner: python
