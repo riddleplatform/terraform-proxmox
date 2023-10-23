@@ -10,7 +10,7 @@ terraform {
 
 provider "proxmox" {
   # Configuration options
-  pm_api_url  = "https://proxmox.example.com:8006/api2/json"
+  pm_api_url = "https://proxmox.example.com:8006/api2/json"
   # It is strongly recommended to pass these securely
   # You can use environment variables instead:
   # export PM_USER="user@pve"
