@@ -20,6 +20,7 @@ locals {
       cpu_cores        = lookup(v, "cpu_cores", 1)
       cpu_type         = lookup(v, "cpu_type", "host")
       ciuser           = lookup(v, "ciuser", null)
+      sshkeys          = lookup(v, "sshkeys", null)
       automatic_reboot = lookup(v, "automatic_reboot", true)
       ipconfig0        = lookup(v, "ipconfig0", null)
       tags             = lookup(v, "tags", null)

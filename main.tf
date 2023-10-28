@@ -20,7 +20,7 @@ resource "proxmox_vm_qemu" "virtual_machine_cloud_init" {
   cores            = each.value.cpu_cores
   cpu              = each.value.cpu_type
   ciuser           = each.value.ciuser
-  sshkeys          = var.sshkeys
+  sshkeys          = each.value.sshkeys
   automatic_reboot = each.value.automatic_reboot
   ipconfig0        = each.value.ipconfig0
 
