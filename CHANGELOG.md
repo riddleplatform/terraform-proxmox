@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.0](https://github.com/riddleplatform/terraform-proxmox/compare/v0.1.1...v0.2.0) (2023-10-28)
+
+
+### Features
+
+* Enable provisioning multiple disks ([5bddafc](https://github.com/riddleplatform/terraform-proxmox/commit/5bddafc8ac3752e58d9197388a87f292bd9464fa))
+* Enable provisioning multiple disks ([daf84bb](https://github.com/riddleplatform/terraform-proxmox/commit/daf84bba1e21d3e707b6a0f81e308cbd432e2cdf))
+
 ## [0.1.1](https://github.com/riddleplatform/terraform-proxmox/compare/v0.1.0...v0.1.1) (2023-10-28)
 
 
