@@ -20,6 +20,7 @@ variable "clone_ci" {
     cpu_cores        = optional(number)
     cpu_type         = optional(string)
     ciuser           = optional(string)
+    sshkeys          = optional(string)
     automatic_reboot = optional(bool)
     ipconfig0        = optional(string)
     tags             = optional(string)
@@ -71,6 +72,7 @@ variable "clone_ci" {
       cpu_cores         = 1
       cpu_type          = "host"
       ciuser            = null
+      sshkeys           = null
       automatic_reboot  = true
       ipconfig0         = "ip=dhcp"
       tags              = null
@@ -85,11 +87,4 @@ variable "clone_ci" {
       network_link_down = false
     }
   }
-}
-
-variable "sshkeys" {
-  description = "SSH public keys for cloud-init user"
-  type        = string
-  default     = null
-  sensitive   = true
 }

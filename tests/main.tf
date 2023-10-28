@@ -28,14 +28,18 @@ module "test_vm_with_disk_networking" {
 
   clone_ci = {
     vm = {
-      name              = "test"
-      target_pve_node   = "pve_test"
-      clone             = "test_clone"
-      disk_type         = "scsi"
-      disk_storage_pool = "local-lvm"
-      disk_size         = "60G"
-      network_model     = "virtio"
-      network_bridge    = "vmbr0"
+      name            = "test"
+      target_pve_node = "pve_test"
+      clone           = "test_clone"
+      disks = {
+        scsi0_boot = {
+          disk_type         = "scsi"
+          disk_storage_pool = "local-lvm"
+          disk_size         = "60G"
+        }
+      }
+      network_model  = "virtio"
+      network_bridge = "vmbr0"
     }
   }
 }
@@ -45,12 +49,16 @@ module "test_vm_with_disk" {
 
   clone_ci = {
     vm = {
-      name              = "test"
-      target_pve_node   = "pve_test"
-      clone             = "test_clone"
-      disk_type         = "scsi"
-      disk_storage_pool = "local-lvm"
-      disk_size         = "60G"
+      name            = "test"
+      target_pve_node = "pve_test"
+      clone           = "test_clone"
+      disks = {
+        scsi0_boot = {
+          disk_type         = "scsi"
+          disk_storage_pool = "local-lvm"
+          disk_size         = "60G"
+        }
+      }
     }
   }
 }
