@@ -57,27 +57,27 @@ module "cloud_init_vm" {
       network_link_down = false
     }
     vm_no_network = {
-      name              = "vm3"
-      target_pve_node   = "pve"
-      clone             = "ubuntu-ci"
-      qemu_os           = "l26"
-      description       = "VM cloned from Ubuntu cloud-init template"
-      bios              = "seabios"
-      onboot            = true
-      startup           = "Start/Shutdown order: any"
-      oncreate          = true
-      tablet            = true
-      boot              = "order=scsi0;net0"
-      scsihw            = "lsi"
-      agent             = 0
-      memory            = 1024
-      cpu_sockets       = 1
-      cpu_cores         = 1
-      cpu_type          = "host"
-      ciuser            = "root"
-      automatic_reboot  = true
-      ipconfig0         = "ip=dhcp"
-      tags              = "ubuntu-vm"
+      name             = "vm3"
+      target_pve_node  = "pve"
+      clone            = "ubuntu-ci"
+      qemu_os          = "l26"
+      description      = "VM cloned from Ubuntu cloud-init template"
+      bios             = "seabios"
+      onboot           = true
+      startup          = "Start/Shutdown order: any"
+      oncreate         = true
+      tablet           = true
+      boot             = "order=scsi0;net0"
+      scsihw           = "lsi"
+      agent            = 0
+      memory           = 1024
+      cpu_sockets      = 1
+      cpu_cores        = 1
+      cpu_type         = "host"
+      ciuser           = "root"
+      automatic_reboot = true
+      ipconfig0        = "ip=dhcp"
+      tags             = "ubuntu-vm"
       disks = {
         boot = {
           disk_type         = "scsi"
@@ -106,27 +106,27 @@ module "cloud_init_vm" {
       }
     }
     vm_with_disk_with_network = {
-      name              = "vm4"
-      target_pve_node   = "pve"
-      clone             = "ubuntu-ci"
-      qemu_os           = "l26"
-      description       = "VM cloned from Ubuntu cloud-init template"
-      bios              = "seabios"
-      onboot            = true
-      startup           = "Start/Shutdown order: any"
-      oncreate          = true
-      tablet            = true
-      boot              = "order=scsi0;net0"
-      scsihw            = "lsi"
-      agent             = 0
-      memory            = 1024
-      cpu_sockets       = 1
-      cpu_cores         = 1
-      cpu_type          = "host"
-      ciuser            = "root"
-      automatic_reboot  = true
-      ipconfig0         = "ip=dhcp"
-      tags              = "ubuntu-vm"
+      name             = "vm4"
+      target_pve_node  = "pve"
+      clone            = "ubuntu-ci"
+      qemu_os          = "l26"
+      description      = "VM cloned from Ubuntu cloud-init template"
+      bios             = "seabios"
+      onboot           = true
+      startup          = "Start/Shutdown order: any"
+      oncreate         = true
+      tablet           = true
+      boot             = "order=scsi0;net0"
+      scsihw           = "lsi"
+      agent            = 0
+      memory           = 1024
+      cpu_sockets      = 1
+      cpu_cores        = 1
+      cpu_type         = "host"
+      ciuser           = "root"
+      automatic_reboot = true
+      ipconfig0        = "ip=dhcp"
+      tags             = "ubuntu-vm"
       disks = {
         boot = {
           disk_type         = "scsi"
