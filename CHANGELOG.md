@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/riddleplatform/terraform-proxmox/compare/v0.1.0...v0.1.1) (2023-10-28)
+
+
+### Bug Fixes
+
+* Add clone parameter ([4d6c231](https://github.com/riddleplatform/terraform-proxmox/commit/4d6c231b11faec9697658a26fd35bfd95f3aa366))
+
 ## 0.1.0 (2023-10-28)
 
 
