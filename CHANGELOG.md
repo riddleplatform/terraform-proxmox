@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/riddleplatform/terraform-proxmox/compare/v0.2.0...v0.2.1) (2023-10-28)
+
+
+### Bug Fixes
+
+* Test changing default values for cloud-init ([2406156](https://github.com/riddleplatform/terraform-proxmox/commit/2406156059f6a44fa528f5ad3922e3a6dcc0edb9))
+
 ## [0.2.0](https://github.com/riddleplatform/terraform-proxmox/compare/v0.1.1...v0.2.0) (2023-10-28)
 
 
