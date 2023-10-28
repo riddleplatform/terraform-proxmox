@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/riddleplatform/terraform-proxmox/compare/v0.2.1...v0.2.2) (2023-10-28)
+
+
+### Bug Fixes
+
+* Add scsihw to cloud-init resource ([2fe09da](https://github.com/riddleplatform/terraform-proxmox/commit/2fe09da82c7419a8a2c326407c633c9c494d4f17))
+
 ## [0.2.1](https://github.com/riddleplatform/terraform-proxmox/compare/v0.2.0...v0.2.1) (2023-10-28)
 
 
