@@ -25,25 +25,25 @@ resource "proxmox_vm_qemu" "virtual_machine_cloud_init" {
   ipconfig0        = each.value.ipconfig0
 
   dynamic "disk" {
-    for_each = contains(keys(each.value), "disk_type") && each.value.disk_type != null && each.value.disk_storage_pool != null && each.value.disk_size != null ? [1] : []
+    for_each = each.value.disks
 
     content {
-      type        = each.value.disk_type
-      storage     = each.value.disk_storage_pool
-      size        = each.value.disk_size
-      format      = each.value.disk_format
-      cache       = each.value.disk_cache
-      backup      = each.value.disk_backup
-      iothread    = each.value.disk_iothread
-      replicate   = each.value.disk_replicate
-      ssd         = each.value.disk_ssd
-      discard     = each.value.disk_discard
-      mbps        = each.value.disk_mbps
-      mbps_rd     = each.value.disk_mbps_rd
-      mbps_rd_max = each.value.disk_mbps_rd_max
-      mbps_wr     = each.value.disk_mbps_wr
-      mbps_wr_max = each.value.disk_mbps_wr_max
-      media       = each.value.disk_media
+      type        = disk.value.disk_type
+      storage     = disk.value.disk_storage_pool
+      size        = disk.value.disk_size
+      format      = disk.value.disk_format
+      cache       = disk.value.disk_cache
+      backup      = disk.value.disk_backup
+      iothread    = disk.value.disk_iothread
+      replicate   = disk.value.disk_replicate
+      ssd         = disk.value.disk_ssd
+      discard     = disk.value.disk_discard
+      mbps        = disk.value.disk_mbps
+      mbps_rd     = disk.value.disk_mbps_rd
+      mbps_rd_max = disk.value.disk_mbps_rd_max
+      mbps_wr     = disk.value.disk_mbps_wr
+      mbps_wr_max = disk.value.disk_mbps_wr_max
+      media       = disk.value.disk_media
     }
   }
 

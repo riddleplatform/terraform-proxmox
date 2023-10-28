@@ -78,21 +78,32 @@ module "cloud_init_vm" {
       automatic_reboot  = true
       ipconfig0         = "ip=dhcp"
       tags              = "ubuntu-vm"
-      disk_type         = "scsi"
-      disk_storage_pool = "local-lvm"
-      disk_size         = "60G"
-      disk_format       = "raw"
-      disk_cache        = "none"
-      disk_backup       = true
-      disk_iothread     = 0
-      disk_replicate    = 0
-      disk_ssd          = 0
-      disk_mbps         = 0
-      disk_mbps_rd      = 0
-      disk_mbps_rd_max  = 0
-      disk_mbps_wr      = 0
-      disk_mbps_wr_max  = 0
-      disk_media        = "disk"
+      disks = {
+        boot = {
+          disk_type         = "scsi"
+          disk_storage_pool = "local-lvm"
+          disk_size         = "60G"
+        }
+        storage = {
+          boot = {
+            disk_type         = "scsi"
+            disk_storage_pool = "local-lvm"
+            disk_size         = "100G"
+            disk_format       = "raw"
+            disk_cache        = "none"
+            disk_backup       = true
+            disk_iothread     = 0
+            disk_replicate    = 0
+            disk_ssd          = 0
+            disk_mbps         = 0
+            disk_mbps_rd      = 0
+            disk_mbps_rd_max  = 0
+            disk_mbps_wr      = 0
+            disk_mbps_wr_max  = 0
+            disk_media        = "disk"
+          }
+        }
+      }
     }
     vm_with_disk_with_network = {
       name              = "vm4"
@@ -116,21 +127,32 @@ module "cloud_init_vm" {
       automatic_reboot  = true
       ipconfig0         = "ip=dhcp"
       tags              = "ubuntu-vm"
-      disk_type         = "scsi"
-      disk_storage_pool = "local-lvm"
-      disk_size         = "60G"
-      disk_format       = "raw"
-      disk_cache        = "none"
-      disk_backup       = true
-      disk_iothread     = 0
-      disk_replicate    = 0
-      disk_ssd          = 0
-      disk_mbps         = 0
-      disk_mbps_rd      = 0
-      disk_mbps_rd_max  = 0
-      disk_mbps_wr      = 0
-      disk_mbps_wr_max  = 0
-      disk_media        = "disk"
+      disks = {
+        boot = {
+          disk_type         = "scsi"
+          disk_storage_pool = "local-lvm"
+          disk_size         = "60G"
+        }
+        storage = {
+          boot = {
+            disk_type         = "scsi"
+            disk_storage_pool = "local-lvm"
+            disk_size         = "100G"
+            disk_format       = "raw"
+            disk_cache        = "none"
+            disk_backup       = true
+            disk_iothread     = 0
+            disk_replicate    = 0
+            disk_ssd          = 0
+            disk_mbps         = 0
+            disk_mbps_rd      = 0
+            disk_mbps_rd_max  = 0
+            disk_mbps_wr      = 0
+            disk_mbps_wr_max  = 0
+            disk_media        = "disk"
+          }
+        }
+      }
       network_model     = "virtio"
       network_macaddr   = "aa:bb:cc:dd:ee:ff"
       network_bridge    = "vmbr0"
