@@ -14,6 +14,7 @@ resource "proxmox_vm_qemu" "virtual_machine_cloud_init" {
   tablet           = each.value.tablet
   boot             = each.value.boot
   bootdisk         = each.value.bootdisk
+  scsihw           = each.value.scsihw
   agent            = each.value.agent
   memory           = each.value.memory
   sockets          = each.value.cpu_sockets
