@@ -1,7 +1,7 @@
 import re
 import sys
 
-pattern = r"(feat|fix|maint|ci|docs|chore)[!]{0,1}\:.*"
+pattern = r"(feat|fix|improvement|refactor|ci|docs|chore)[!]{0,1}\:.*"
 commit_file = sys.argv[1]
 
 
@@ -19,7 +19,7 @@ if re.fullmatch(pattern, commit):
 else:
     print(
         f""""'{commit}' does not match the required commit pattern. Should follow syntax:
-        (feat|fix|maint|ci|docs|chore): (message)
+        (feat|fix|improvement|refactor|ci|docs|chore): (message)
         For breaking changes, add '!' after the prefix.
 
         Example: 'feat: Added feature XYZ' or 'feat!: Added non-backwards compatible change XYZ'

@@ -1,0 +1,45 @@
+name: Terraform Test and Deploy
+on:
+  push:
+    branches:
+      - 'feature/*'
+      - 'hotfix/*'
+      - 'bugfix/*'
+      - 'main'
+    paths:
+      - '*.tf'
+      - 'tests/*.tf'
+      - '.github/workflows/terraform-test.yaml'
+
+jobs:
+  terraform:
+    name: Test Terraform Module
+    runs-on: self-hosted
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: '1.6.2'
+
+      - name: Check Terraform Format
+        id: fmt
+        run: terraform fmt -check -recursive
+
+      - name: Validate Terraform
+        id: validate
+        run: |
+          cd tests
+          terraform init
+          terraform validate
