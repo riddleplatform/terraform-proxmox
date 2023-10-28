@@ -4,6 +4,7 @@ resource "proxmox_vm_qemu" "virtual_machine_cloud_init" {
   name             = each.value.name
   target_node      = each.value.target_pve_node
   os_type          = "cloud-init"
+  clone            = each.value.clone
   qemu_os          = each.value.qemu_os
   desc             = each.value.description
   bios             = each.value.bios
